@@ -1,18 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';  
+import { NgModule } from '@angular/core';  
+import { AppRoutingModule } from './app-routing.module';  
+import { AppComponent } from './app.component';  
+import { HttpClientModule } from '@angular/common/http';
+import { ClientComponent } from './client/client.component';
+import { LocaliteComponent } from './localite/localite.component';
+import { ConditiontaxationComponent } from './conditiontaxation/conditiontaxation.component';
+import { TarifComponent } from './tarif/tarif.component'; 
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
+@NgModule({  
+  declarations: [  
+    AppComponent, ClientComponent, LocaliteComponent, ConditiontaxationComponent, TarifComponent, ClientComponent  
+  ],  
+  imports: [  
+    BrowserModule,  
+    AppRoutingModule,  
+    HttpClientModule,
+    FormsModule,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  providers: [LocaliteComponent, TarifComponent, ConditiontaxationComponent],  
+  bootstrap: [AppComponent]  
+})  
+export class AppModule { } 

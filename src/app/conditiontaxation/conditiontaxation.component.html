@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+<ng-container class="container">    
+    <table class="table table-bordered table-hover">    
+      <tr>    
+        <th>Id</th>    
+        <th>Name</th>    
+        <th>Gender</th>    
+        <th>Mobile</th>    
+      </tr>    
+      <tr *ngFor="let item of conditionTaxations ">    
+        <td>{{item.idClient}}</td>    
+        <td>{{item.taxePortDu}}</td>    
+        <td>{{item.taxePortPaye}}</td>    
+        <td>{{item.useTaxePortDuGenerale}}</td>   
+        <td>{{item.useTaxePortPayeGenerale  }}</td>    
+ 
+      </tr>    
+    </table>    
+  </ng-container>  
